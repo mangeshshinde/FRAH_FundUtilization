@@ -46,10 +46,10 @@ const users = [...Array(24)].map((_, index) => ({
 }));
 
 const TABLE_HEAD = [
-  { id: 'name', label: 'Name', alignRight: false },
-  { id: 'seats', label: 'No. of Seats', alignRight: false },
-  { id: 'from', label: 'From', alignRight: false },
-  { id: 'to', label: 'To', alignRight: false },
+  { id: 'name', label: 'Customer Name', alignRight: false },
+  { id: 'seats', label: 'Amount', alignRight: false },
+  { id: 'from', label: 'Request Date', alignRight: false },
+  { id: 'to', label: 'Due Date', alignRight: false },
 ];
 
 // ----------------------------------------------------------------------
@@ -201,8 +201,8 @@ export default function TakeAction() {
               Select logout time: <TimePicker onChange={(time)=>{}} value={new Date()} />
             </Box>
             <Box style={{width:300}}>
-              No.of Seats: <Slider
-                  defaultValue={70}
+              Amount : <Slider
+                  defaultValue={100000}
                   valueLabelDisplay="auto"
                   onChange={(seats)=>setSeats(seats)}
               />
@@ -217,9 +217,9 @@ export default function TakeAction() {
           <Typography variant="h4" gutterBottom>
             Take Action
           </Typography>
-          <Button variant="contained" component={RouterLink} to="#" onClick={handleClickOpen} startIcon={<Iconify icon="eva:plus-fill"/>}>
-            New Request
-          </Button>
+          {/*<Button variant="contained" component={RouterLink} to="#" onClick={handleClickOpen} startIcon={<Iconify icon="eva:plus-fill"/>}>*/}
+          {/*  New Request*/}
+          {/*</Button>*/}
         </Stack>
 
         <Card>

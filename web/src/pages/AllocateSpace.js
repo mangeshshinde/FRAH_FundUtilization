@@ -40,10 +40,10 @@ export default function AllocateSpace() {
     };
 
     return (
-        <Page title="Allocate Space">
+        <Page title="Allocate Fund">
             <Container maxWidth="xl">
                 <Typography variant="h4" sx={{ mb: 5 }}>
-                   Allocate Space
+                   Allocate Fund
                 </Typography>
                 <Grid container spacing={3} style={{marginBottom:10}}>
                     <Grid item xs={12} sm={6} md={3}>
@@ -51,19 +51,19 @@ export default function AllocateSpace() {
                     id="combo-box-demo"
                     options={employeeData}
                     sx={{ width: 300}}
-                    renderInput={(params) => <TextField {...params} label="Employee..." />}/>
+                    renderInput={(params) => <TextField {...params} label="Security..." />}/>
                     </Grid>
                     <Grid item xs={14} sm={8} md={6} style={{paddingLeft:100}}>
-                        Seats
+                        Amount Range
                     <Slider
-                    getAriaLabel={() => 'Temperature range'}
+                    getAriaLabel={() => 'Amount Range'}
                     value={sliderValue}
                     onChange={handleChange}
                     valueLabelDisplay="auto"
                     />
                     </Grid>
                     <Grid item xs={12} sm={6} md={3}>
-                        <Button size="large" variant="contained" onClick={() => {}}>Confirm Booking</Button>
+                        <Button size="large" variant="contained" onClick={() => {}}>Confirm Allocation</Button>
                     </Grid>
                 </Grid>
                 <Grid container spacing={4}>

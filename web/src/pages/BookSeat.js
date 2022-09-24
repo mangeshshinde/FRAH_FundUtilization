@@ -24,9 +24,14 @@ import DatePicker from "react-datepicker";
 
 // ----------------------------------------------------------------------
 
+const sectors={
+    reservedSeats:[{seatId:1,seatName:"Auto Mobile"}, {seatId:2,seatName:"Information Technology"}, {seatId:3,seatName:"Power"}],
+    availableSeats:[{seatId:4,seatName:"Agriculture"}, {seatId:5,seatName:"Oil & Gas"}, {seatId:6,seatName:"Aviation"}]
+}
+
 export default function BookSeat() {
 
-    const [seats, setSeats] = useState({});
+    const [seats, setSeats] = useState(sectors);
     const [startDate, setStartDate] = useState(new Date());
     const id = sessionStorage.getItem('employeeID')
     console.log('id-----',id)
@@ -41,10 +46,10 @@ export default function BookSeat() {
 
 
   return (
-      <Page title="Book Seat">
+      <Page title="Invest Fund">
         <Container maxWidth="xl">
           <Typography variant="h4" sx={{ mb: 5 }}>
-           Book Seat
+           Invest Fund
           </Typography>
             <Grid container spacing={3} style={{marginBottom:30}}>
                 <Grid item xs={12} sm={6} md={3}>
@@ -54,7 +59,7 @@ export default function BookSeat() {
                 To:  <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
                 </Grid>
                 <Grid item xs={12} sm={6} md={3}>
-                    <Button size="large" variant="contained" onClick={() => {}}>Confirm Booking</Button>
+                    <Button size="large" variant="contained" onClick={() => {}}>Confirm Investment</Button>
                 </Grid>
             </Grid>
           <Grid container spacing={3}>

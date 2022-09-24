@@ -40,7 +40,7 @@ export default function SeatGrid(props){
             <Grid item xs={10} md={10} lg={12}>
                 <Fade in={true} {...({ timeout: 2000 })}>
                     <Card>
-                        <CardHeader title={"Seat Selector"} />
+                        <CardHeader title={"Select Sector"} />
                         <CardContent>
                             <Box sx={{
                                 display: 'grid',

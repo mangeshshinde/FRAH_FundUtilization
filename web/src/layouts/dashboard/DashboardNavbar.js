@@ -48,7 +48,7 @@ export default function DashboardNavbar({ onOpenSidebar }) {
           <Iconify icon="eva:menu-2-fill" />
         </IconButton>
         <Typography variant="h3" sx={{ px: 2, color: 'text.primary', mt: 2, mb: 1 }}>
-          Commandos - Seat Allocation Tool
+          FRAH Fund Utilization Tool
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
 

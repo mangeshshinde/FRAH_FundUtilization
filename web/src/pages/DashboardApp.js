@@ -54,10 +54,10 @@ function applySortFilter(array, comparator, query) {
 }
 
 const TABLE_HEAD = [
-    { id: 'name', label: 'Employee Name', alignRight: false },
-    { id: 'numofseat', label: 'No of seats', alignRight: false },
-    { id: 'from', label: 'From', alignRight: false },
-    { id: 'to', label: 'To', alignRight: false },
+    { id: 'name', label: 'Customer Name', alignRight: false },
+    { id: 'numofseat', label: 'Amount', alignRight: false },
+    { id: 'from', label: 'Requested Date', alignRight: false },
+    { id: 'to', label: 'Due Date', alignRight: false },
 ];
 
 function descendingComparator(a, b, orderBy) {
@@ -147,19 +147,19 @@ export default function DashboardApp() {
 
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Total Requests" total={20} icon={'carbon:intent-request-scale-in'} />
+            <AppWidgetSummary title="Total Requests" total={4} icon={'carbon:intent-request-scale-in'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Total Seats Booked" total={100} color="info" icon={'fluent-emoji:seat'} />
+            <AppWidgetSummary title="Total Fund Utilized" total={400000} color="info" icon={'icon-park:funds'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Zones allocated" total={10} color="info" icon={'eos-icons:virtual-space'} />
+            <AppWidgetSummary title="Fund Available" total={10000000} color="info" icon={'flat-color-icons:money-transfer'} />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary title="Floors" total={4} color="error" icon={'carbon:floorplan'} />
+            <AppWidgetSummary title="Total Fund" total={140000000} color="error" icon={'emojione-v1:money-bag'} />
           </Grid>
 
             <Grid item xs={16} md={10} lg={12}>
@@ -241,7 +241,7 @@ export default function DashboardApp() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits
-              title="Seats Booked"
+              title="Fund Growth"
               subheader="(+43%) than last year"
               chartLabels={[
                 '01/01/2003',
@@ -258,19 +258,19 @@ export default function DashboardApp() {
               ]}
               chartData={[
                 {
-                  name: 'Zone A',
+                  name: 'Automobile Industry',
                   type: 'column',
                   fill: 'solid',
                   data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
                 },
                 {
-                  name: 'Zone B',
+                  name: 'Banking Industry',
                   type: 'area',
                   fill: 'gradient',
                   data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
                 },
                 {
-                  name: 'Zone C',
+                  name: 'Energy Industry',
                   type: 'line',
                   fill: 'solid',
                   data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
@@ -281,12 +281,12 @@ export default function DashboardApp() {
 
           <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
-              title="Current Bookings"
+              title="Fund Utilization"
               chartData={[
-                { label: 'Floor 1', value: 4344 },
-                { label: 'FLoor 2', value: 5435 },
-                { label: 'Floor 3', value: 1443 },
-                { label: 'Floor 4', value: 4443 },
+                { label: 'Sector A:', value: 12 },
+                { label: 'Sector B:', value: 32 },
+                { label: 'Sector C:', value: 24 },
+                { label: 'Sector D:', value: 32 },
               ]}
               chartColors={[
                 theme.palette.primary.main,

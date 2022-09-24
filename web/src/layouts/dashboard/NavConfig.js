@@ -18,13 +18,13 @@ const navConfig = [
     visible: false
   },
   {
-    title: 'allocate-space',
-    path: '/dashboard/allocate-space',
+    title: 'allocate-fund',
+    path: '/dashboard/allocate-fund',
     icon: getIcon('eva:shopping-bag-fill'),
     visible: false
   },
   {
-    title: 'book-seat',
+    title: 'invest-fund',
     path: '/dashboard/book-seat',
     icon: getIcon('eva:shopping-bag-fill'),
     visible: true
@@ -55,7 +55,7 @@ function checkIfScreenShouldBeVisible(item,employeeData){
     const isUserLoggedIn = sessionStorage.getItem('isUserLoggedIn')
     isVisible = isUserLoggedIn
   }
-  if(item.title === 'take-action' || item.title === 'allocate-space'){
+  if(item.title === 'take-action' || item.title === 'allocate-fund'){
     if(employeeData.role === 'space-manager' || employeeData.role === 'space-owner'){
       isVisible = true
     }

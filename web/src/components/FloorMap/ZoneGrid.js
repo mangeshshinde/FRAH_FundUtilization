@@ -6,15 +6,16 @@ import SeatGrid from "./SeatGrid";
 
 const floorData = [
     {
-        floorName:"Floor 1",
+        floorName:"Asia",
         count:200,
-        isAvailable:false,
+        isAvailable:true,
         zone:[
             {
-                zoneName: "A",
+                zoneName: "India",
                 numberOfSeats:50,
                 rangeFrom:19,
                 rangeTo:50,
+                isAvailable:true,
                 seats:{
                     seatsReserved:[{id:1,name:"Seat A"}, {id:2,name:"Seat B"}, {id:3,name:"Seat C"}],
                     seatsAvailable:[{id:4,name:"Seat D"}, {id:5,name:"Seat E"}, {id:6,name:"Seat F"}]
@@ -22,7 +23,7 @@ const floorData = [
                 availableSeats:20
             },
             {
-                zoneName: "B",
+                zoneName: "Singapore",
                 numberOfSeats:50,
                 rangeFrom:51,
                 rangeTo:100,
@@ -32,7 +33,7 @@ const floorData = [
                 },
                 availableSeats:25
             },{
-                zoneName: "C",
+                zoneName: "China",
                 numberOfSeats:50,
                 rangeFrom:101,
                 rangeTo:150,
@@ -43,7 +44,7 @@ const floorData = [
                 availableSeats:0
             },
             {
-                zoneName: "D",
+                zoneName: "Hong Kong",
                 numberOfSeats:50,
                 rangeFrom:151,
                 rangeTo:200,
@@ -55,7 +56,7 @@ const floorData = [
             }
         ]
     },{
-        floorName:"Floor 2",
+        floorName:"Europe",
         count:200,
         isAvailable:true,
         zone:[
@@ -108,9 +109,9 @@ const floorData = [
             }
         ]
     },{
-        floorName:"Floor 3",
+        floorName:"Africa",
         count:200,
-        isAvailable:true,
+        isAvailable:false,
         zone:[
             {
                 zoneName: "A",
@@ -162,6 +163,11 @@ const floorData = [
         ]
     }
 ]
+
+const seats={
+    reservedSeats:[{seatId:1,seatName:"Auto Mobile"}, {seatId:2,seatName:"Information Technology"}, {seatId:3,seatName:"Power"}],
+    availableSeats:[{seatId:4,seatName:"Agriculture"}, {seatId:5,seatName:"Oil & Gas"}, {seatId:6,seatName:"Aviation"}]
+}
 
 export default function ZoneGrid(){
 
@@ -239,7 +245,7 @@ export default function ZoneGrid(){
             <Grid item xs={10} md={10} lg={12}>
                 <Fade in={true} {...({ timeout: 2000 })}>
                     <Card>
-                        <CardHeader title={"Floor Selector"} />
+                        <CardHeader title={"Select Region"} />
                         <CardContent>
                             <Box sx={{
                                 display: 'grid',
@@ -262,7 +268,7 @@ export default function ZoneGrid(){
         <Grid item xs={10} md={10} lg={12} hidden={!floorSelected}>
             <Fade in={floorSelected} {...({ timeout: 2000 })}>
             <Card>
-                <CardHeader title={"Zone Selector"} />
+                <CardHeader title={"Select Country"} />
                 <CardContent>
                     <Box sx={{
                         display: 'grid',
@@ -282,6 +288,9 @@ export default function ZoneGrid(){
             </Card>
             </Fade>
         </Grid>
+            <Grid item xs={10} md={10} lg={12} hidden={!zoneSelected}>
+                <SeatGrid seats={seats}/>
+            </Grid>
         </Grid>
     );
 

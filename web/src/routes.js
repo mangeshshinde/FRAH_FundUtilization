@@ -26,7 +26,7 @@ export default function Router() {
         { path: 'app', element: <DashboardApp /> },
         { path: 'take-action', element: <TakeAction /> },
         { path: 'create-team', element: <CreateTeam /> },
-        { path: 'allocate-space', element: <AllocateSpace /> },
+        { path: 'allocate-fund', element: <AllocateSpace /> },
         { path: 'book-seat', element: <BookSeat /> },
         { path: 'login', element: <Login />},
         { path: 'register', element: <Register />},
