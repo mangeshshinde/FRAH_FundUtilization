@@ -31,6 +31,9 @@ jobs:
         # An ordered list of keys to use for restoring the cache if no cache hit occurred for key
         restore-keys: ${{ runner.os }}-maven
     - name: Build with Maven
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: mvn -B package --file api/pom.xml
 
   deploy:
     runs-on: ubuntu-latest
