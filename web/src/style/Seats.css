@@ -1,0 +1,58 @@
+#app {
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 200px;
+    margin: auto;
+}
+
+.grid td {
+    width: 25px;
+    height: 35px;
+    border: 2px solid #16ec39;
+    text-align: center;
+    float: left;
+    margin: 5px;
+}
+
+.reserved {
+    background: rgba(70, 54, 54, 0.18);
+    color: #fff;
+    border: 2px solid #170104 !important;
+    display: inline-block;
+}
+
+.selected {
+    background: #f3bb09;
+    color: #fff;
+    display: inline-block;
+}
+
+.reserved::after {
+    color: chocolate;
+}
+
+.available {
+    content: "A";
+    background: #16a8ec;
+    color: rgba(0, 0, 0, 0.87);
+    border: 2px solid #1648ec !important;
+    display: inline-block;
+}
+
+.available:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+.btnmargin {
+    margin-top: 15px;
+}

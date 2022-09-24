@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+	<changeSet id="02" author="mangesh">
+
+		<insert tableName="roles">
+			<column name="role_type" value="ADMIN" />
+			<column name="role_code" value="AM" />
+			<column name="description"
+					value="Admin Role" />
+			<column name="created_on" valueDate="SYSDATETIME()" />
+			<column name="modified_on" valueDate="SYSDATETIME()" />
+		</insert>
+
+		<insert tableName="roles">
+			<column name="role_type" value="EMPLOYEE" />
+			<column name="role_code" value="EMP" />
+			<column name="description"
+					value="Employee Role" />
+			<column name="created_on" valueDate="SYSDATETIME()" />
+			<column name="modified_on" valueDate="SYSDATETIME()" />
+		</insert>
+
+		<insert tableName="employee">
+			<column name="fname" value="Amdin" />
+			<column name="lname" value="User" />
+			<column name="email" value="admin@gmail.com" />
+			<column name="password" value="User123" />
+			<column name="role_id" valueNumeric="1" />
+			<column name="manager_id" valueNumeric="1" />
+		</insert>
+		<insert tableName="employee">
+			<column name="fname" value="Mangesh" />
+			<column name="lname" value="Shinde" />
+			<column name="email" value="mangesh@gmail.com" />
+			<column name="password" value="User123" />
+			<column name="role_id" valueNumeric="2" />
+			<column name="manager_id" valueNumeric="1" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>
